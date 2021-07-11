@@ -22,7 +22,12 @@ func main() {
 			"service_id":    serviceId,
 			"num_days":      "20"})
 
-		dates := jsonResponseMap["data"].([]interface{})
+		dates, ok := jsonResponseMap["data"].([]interface{})
+
+		if !ok {
+			panic("Received empty data from WebServices - check your credentials and try again")
+		}
+
 		firstResult := dates[0].(map[string]interface{})
 
 		firstAvailableDate := firstResult["date"].(string)
