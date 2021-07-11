@@ -10,7 +10,7 @@ import (
 )
 
 var siteid string = "appointplus430/360"
-var apiKey = "f5c9e47015ecd81423b5a65aef0240e9da17b921"
+var apiKey = ""
 var serviceIds = []string{"7749", "1658", "7750"}
 
 func main() {
